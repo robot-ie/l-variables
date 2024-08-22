@@ -4,7 +4,7 @@ namespace l_variables {
 
   
 
-    //% block
+    //% block="object detected on pin $pin"
     //% group="Basic"
     export function onObjectDetected(pin:DigitalPin, handler: () => void) {
         pins.setPull(pin, PinPullMode.PullUp)
@@ -21,7 +21,7 @@ namespace l_variables {
     }
 
     let strip:neopixel.Strip = null
-    //% block
+    //% block="turn on $lightsNumber lights on pin $pin"
     //% group="Basic"
     export function turnLights(pin: DigitalPin, lightsNumber:number) {
         if (strip==null){
@@ -36,7 +36,7 @@ namespace l_variables {
 
 
   
-    //% block
+    //% block="animate lights on pin $pin"
     //% group="Basic"
     export function animateLights(pin: DigitalPin) {
         if (strip == null) {
