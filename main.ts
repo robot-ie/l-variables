@@ -5,7 +5,7 @@ namespace l_variables {
 
   
 
-    //% block="object detected on pin $pin"
+    //% block="on object detected on pin $pin"
     //% group="Basic"
     export function onObjectDetected(pin:DigitalPin, handler: () => void) {
         pins.setPull(pin, PinPullMode.PullUp)
