@@ -44,10 +44,10 @@ namespace l_variables {
         }
         for (let i = 0; i < 5; i++) {
             strip.showColor(NeoPixelColors.Red)
-            basic.pause(100)
+            basic.pause(50)
             strip.clear()
             strip.show()
-            basic.pause(100)
+            basic.pause(50)
         }
         
 
