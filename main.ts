@@ -1,4 +1,4 @@
-//% color=190 weight=100 icon="\uf4d3" block="Variables Lesson"
+//% color=190 weight=100 icon="\f4d3" block="Variables Lesson"
 namespace l_variables {
 
 
