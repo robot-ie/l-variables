@@ -36,7 +36,7 @@ namespace l_variables {
     }
     //% block="turn off all lights on pin 0"
     //% group="Basic"
-    export function turnOffAllLights(lightsNumber: number) {
+    export function turnOffAllLights() {
         if (strip == null) {
             strip = neopixel.create(DigitalPin.P0, 9, NeoPixelMode.RGB)
         }
