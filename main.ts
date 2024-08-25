@@ -43,13 +43,18 @@ namespace l_variables {
         if (strip == null) {
             strip = neopixel.create(DigitalPin.P0, 9, NeoPixelMode.RGB)
         }
+        let range = strip.range(0, lightsNumber)
+        strip.clear()
+        strip.show()
         for (let i = 0; i < 5; i++) {
-            strip.showColor(NeoPixelColors.Red)
+            range.showColor(NeoPixelColors.Red)
             basic.pause(50)
-            strip.clear()
-            strip.show()
+            range.clear()
+            range.show()
             basic.pause(50)
         }
+        strip.clear()
+        strip.show()
         
 
     }
