@@ -24,7 +24,7 @@ namespace l_variables {
     let strip:neopixel.Strip = null
     //% block="turn on $lightsNumber lights on pin 0"
     //% group="Basic"
-    export function turnLights(lightsNumber:number) {
+    export function turnOnLights(lightsNumber:number) {
         if (strip==null){
             strip = neopixel.create(DigitalPin.P0, 9, NeoPixelMode.RGB)
         }
@@ -39,7 +39,7 @@ namespace l_variables {
   
     //% block="blink $lightsNumber lights on pin $pin"
     //% group="Basic"
-    export function animateLights(lightsNumber: number) {
+    export function blinkLights(lightsNumber: number) {
         if (strip == null) {
             strip = neopixel.create(DigitalPin.P0, 9, NeoPixelMode.RGB)
         }
