@@ -5,15 +5,15 @@ namespace l_variables {
 
   
 
-    //% block="on object detected on pin $pin"
+    //% block="on object detected on pin 1"
     //% group="Basic"
-    export function onObjectDetected(pin:DigitalPin, handler: () => void) {
-        pins.setPull(pin, PinPullMode.PullUp)
+    export function onObjectDetected(handler: () => void) {
+        pins.setPull(DigitalPin.P1, PinPullMode.PullUp)
         let lastState = 1
         let currentState = 1
         pins.setAudioPinEnabled(false)
         basic.forever(function () {
-            currentState = pins.digitalReadPin(pin)
+            currentState = pins.digitalReadPin(DigitalPin.P1)
             if (lastState != currentState && currentState == 0) {
                 handler()
             }
@@ -22,11 +22,11 @@ namespace l_variables {
     }
 
     let strip:neopixel.Strip = null
-    //% block="turn on $lightsNumber lights on pin $pin"
+    //% block="turn on $lightsNumber lights on pin 0"
     //% group="Basic"
-    export function turnLights(pin: DigitalPin, lightsNumber:number) {
+    export function turnLights(lightsNumber:number) {
         if (strip==null){
-            strip = neopixel.create(pin, 9, NeoPixelMode.RGB)
+            strip = neopixel.create(DigitalPin.P0, 9, NeoPixelMode.RGB)
         }
         let range = strip.range(0, lightsNumber)
         strip.clear()
@@ -37,11 +37,11 @@ namespace l_variables {
 
 
   
-    //% block="animate lights on pin $pin"
+    //% block="blink $lightsNumber lights on pin $pin"
     //% group="Basic"
-    export function animateLights(pin: DigitalPin) {
+    export function animateLights(lightsNumber: number) {
         if (strip == null) {
-            strip = neopixel.create(pin, 9, NeoPixelMode.RGB)
+            strip = neopixel.create(DigitalPin.P0, 9, NeoPixelMode.RGB)
         }
         for (let i = 0; i < 5; i++) {
             strip.showColor(NeoPixelColors.Red)
