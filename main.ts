@@ -34,6 +34,15 @@ namespace l_variables {
         range.showColor(NeoPixelColors.Red)
         
     }
+    //% block="turn off all lights on pin 0"
+    //% group="Basic"
+    export function turnOffAllLights(lightsNumber: number) {
+        if (strip == null) {
+            strip = neopixel.create(DigitalPin.P0, 9, NeoPixelMode.RGB)
+        }
+        strip.clear()
+        strip.show()
+    }
 
 
   
