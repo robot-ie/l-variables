@@ -46,7 +46,7 @@ namespace l_variables {
 
 
   
-    //% block="blink $lightsNumber lights on pin $pin"
+    //% block="blink $lightsNumber lights on pin 0"
     //% group="Basic"
     export function blinkLights(lightsNumber: number) {
         if (strip == null) {
